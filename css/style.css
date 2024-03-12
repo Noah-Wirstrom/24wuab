@@ -1,0 +1,124 @@
+#wrapper{
+    
+    display: grid;
+    height: 100vh;
+   
+    grid-template-columns:35% 30% 35%;
+    grid-template-rows: 100% 100% 100% 100% 30%;
+    grid-template-areas: 
+    'hd hd hd'
+    'ab ab ab'
+    'wk wk wk'
+    'ed ed ed'
+    'ft ft ft'
+    ;
+    
+
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+
+header{
+    background-image:url(../img/sexy.jpg) ;
+    background-position: center;
+    background-size: cover;
+    
+    grid-area: hd;
+    text-align: center;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+
+
+
+    
+
+
+
+
+
+
+h1{
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    font-size: 50px;
+    
+    
+}
+
+.h1-wrapper {
+    padding: 1rem;
+    
+    background-color: rgb(69, 0, 0);
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+    margin-right: 1rem;
+    
+}
+
+#about{
+grid-area: ab;
+background-color: rgb(37, 34, 16);
+}
+
+
+
+#about :hover{
+
+    transform: scale(1.05);
+
+}
+
+#work{
+grid-area: wk;
+display: flex;
+justify-content: space-around;
+align-content: stretch;
+
+}
+#work p{
+display: flex;
+border: rgb(62, 1, 1);
+border-radius: 10px;
+text-align: center;
+padding: 2rem;
+transition: transform .2s;
+}
+#work img{
+
+    border-radius: 15px;
+}
+#work :hover{
+    transform: scale(1.05);
+}
+
+
+#education{
+
+grid-area: ed;
+background-color:rgb(37, 34, 16) ;
+
+}
+
+
+#education :hover{
+    transform: scale(1.05);
+}
+
+
+
+footer{
+    grid-area: ft;
+    background-color: maroon;
+}
