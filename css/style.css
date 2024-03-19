@@ -1,17 +1,6 @@
 #wrapper{
     
-    display: grid;
-    height: 100vh;
-   
-    grid-template-columns:35% 30% 35%;
-    grid-template-rows: 100% 100% 100% 100% 30%;
-    grid-template-areas: 
-    'hd hd hd'
-    'ab ab ab'
-    'wk wk wk'
-    'ed ed ed'
-    'ft ft ft'
-    ;
+   background-color: rgb(38, 38, 38);
     
 
 }
@@ -29,13 +18,13 @@ header{
     background-position: center;
     background-size: cover;
     
-    grid-area: hd;
+   
     text-align: center;
     
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+    height: 85vh;
     
 }
 
@@ -52,14 +41,15 @@ h1{
     font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
     color: whitesmoke;
     font-size: 50px;
-    
+    max-width: 100vw;
+    max-height: 60vh;
     
 }
 
 .h1-wrapper {
     padding: 1rem;
     
-    background-color: rgb(69, 0, 0);
+    background-color: rgb(105, 0, 0);
     height: auto;
     width: auto;
     border-radius: 15px;
@@ -67,58 +57,216 @@ h1{
     
 }
 
+h2{
+
+background-color:rgb(105, 0, 0);
+border-radius: 10px;
+padding: 5px;
+
+}
+
+.container {
+    max-width: 300px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+
+nav{
+
+display:flex; 
+flex-direction: row;
+justify-content: space-evenly; 
+padding-top: 2%;
+ 
+
+}
+nav button{
+
+background-color: rgb(105, 0, 0);
+color: whitesmoke;
+border-radius: 10px;
+padding: 10px;
+font-size: x-large;
+border: none;
+outline: none;
+
+}
+
+nav :hover{
+
+    transform: scale(1.2);
+
+}
+
 #about{
-grid-area: ab;
-background-color: rgb(37, 34, 16);
+text-align: center;
+padding-top: 15%;
+padding-bottom: 15%;
+padding-left: 2%;
+padding-right: 2%;
+color: whitesmoke;
+
+}
+
+#about div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 }
 
 
 
-#about :hover{
 
-    transform: scale(1.05);
-
-}
 
 #work{
-grid-area: wk;
+
 display: flex;
-justify-content: space-around;
-align-content: stretch;
+flex-direction: column;
+text-align: center;
+
 
 }
-#work p{
+
+#work div {
+
 display: flex;
+flex-direction: row;
+
+}
+
+#work div div p{
+    display: flex;
+    border: rgb(62, 1, 1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    color: whitesmoke;
+    
+}
+
+#work div  img{
+    width: 50%;
+    padding: 2%;
+    border-radius: 15px;
+    
+}
+
+
+.text{
+
+display: flex;
+flex-direction: column-reverse;
 border: rgb(62, 1, 1);
 border-radius: 10px;
 text-align: center;
 padding: 2rem;
 transition: transform .2s;
-}
-#work img{
+color: whitesmoke;
 
-    border-radius: 15px;
 }
-#work :hover{
-    transform: scale(1.05);
-}
-
 
 #education{
-
-grid-area: ed;
-background-color:rgb(37, 34, 16) ;
+    display: flex;
+    flex-direction:column;
+    
 
 }
 
+#education div{
 
-#education :hover{
-    transform: scale(1.05);
+    display: flex;
+    flex-direction: row;
+    
 }
+
+#education div div p{
+    display: flex;
+    border: rgb(62, 1, 1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    color: whitesmoke;
+    
+}
+
+#education div img{
+    width: 50%;
+    padding: 2%;
+    border-radius: 15px;
+    
+}
+
+
+
 
 
 
 footer{
-    grid-area: ft;
-    background-color: maroon;
+    
+    background-color: rgb(105, 0, 0);
+    height: 10vh;
+    color: whitesmoke;
+    display: flex;
+    flex-direction:column-reverse ;
+    
+}
+
+
+@media only screen and (max-width: 768px){
+
+    #work div {
+
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #work div img{
+
+        width: 100%;
+        max-height: 40vh;
+            
+
+    }
+
+    #education div {
+
+        display: flex;
+        flex-direction: column;
+            
+    }
+    
+    #education div img{
+    
+        width: 100%;
+        max-height: 40vh;
+    }
+                
+    nav :hover{
+        transform: none;
+
+    } 
+       
+    h1{
+
+       font-size: 40px; 
+
+    }
+    header{
+
+        flex-direction: column-reverse;
+        padding-top: 5%;
+    }
+   nav button{
+
+        font-size: 20px;
+
+    }
+  
+
+
+
 }
